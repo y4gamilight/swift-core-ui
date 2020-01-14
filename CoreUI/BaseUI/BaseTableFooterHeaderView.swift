@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BaseTableFooterHeaderView:UITableViewHeaderFooterView {
+open class BaseTableFooterHeaderView:UITableViewHeaderFooterView {
     @IBOutlet weak var view: UIView!
     static var nib: UINib {
         return UINib(nibName: String(describing: self), bundle: nil)
@@ -19,7 +19,7 @@ class BaseTableFooterHeaderView:UITableViewHeaderFooterView {
         nibSetup()
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         nibSetup()
     }

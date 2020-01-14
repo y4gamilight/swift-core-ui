@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		842DAD8C23CD7BBF004E2B06 /* MBProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8453269923B6015500E559BE /* MBProgressHUD.framework */; };
+		842DAD8D23CD7BBF004E2B06 /* MBProgressHUD.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8453269923B6015500E559BE /* MBProgressHUD.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8453266623B5F78A00E559BE /* CoreUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8453265C23B5F78900E559BE /* CoreUI.framework */; };
 		8453266B23B5F78A00E559BE /* CoreUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8453266A23B5F78A00E559BE /* CoreUITests.swift */; };
 		8453266D23B5F78A00E559BE /* CoreUI.h in Headers */ = {isa = PBXBuildFile; fileRef = 8453265F23B5F78900E559BE /* CoreUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -19,7 +21,6 @@
 		8453268423B5F7E200E559BE /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8453267D23B5F7E200E559BE /* BaseViewModel.swift */; };
 		8453269623B5FFAF00E559BE /* GSMessages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8453269423B5FE8900E559BE /* GSMessages.framework */; };
 		8453269723B5FFAF00E559BE /* GSMessages.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8453269423B5FE8900E559BE /* GSMessages.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		8453269A23B6015500E559BE /* MBProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8453269923B6015500E559BE /* MBProgressHUD.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +40,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				842DAD8D23CD7BBF004E2B06 /* MBProgressHUD.framework in Embed Frameworks */,
 				8453269723B5FFAF00E559BE /* GSMessages.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -69,7 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8453269A23B6015500E559BE /* MBProgressHUD.framework in Frameworks */,
+				842DAD8C23CD7BBF004E2B06 /* MBProgressHUD.framework in Frameworks */,
 				8453269623B5FFAF00E559BE /* GSMessages.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -438,7 +440,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = faba.framework.CoreUI;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
+				SKIP_INSTALL = NO;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -470,7 +472,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = faba.framework.CoreUI;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
+				SKIP_INSTALL = NO;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

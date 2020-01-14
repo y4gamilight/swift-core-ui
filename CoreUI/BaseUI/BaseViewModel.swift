@@ -8,23 +8,23 @@
 
 import Foundation
 
-typealias DialogConfirmHandler = (message: String, title: String, strYes: String, strNo: String)
+public typealias DialogConfirmHandler = (message: String, title: String, strYes: String, strNo: String)
 
-class Y4gViewModel {
-    var onError: ((String)->Void)?
-    var onShowErrorMesage: ((String)->Void)?
-    var onBeginIndicator:(()->Void)?
-    var onEndIndicator:(()->Void)?
-    var onOpenCamera:(()->Void)?
-    var onOpenPhoto:(()->Void)?
+public class Y4gViewModel {
+    public var onError: ((String)->Void)?
+    public var onShowErrorMesage: ((String)->Void)?
+    public var onBeginIndicator:(()->Void)?
+    public var onEndIndicator:(()->Void)?
+    public var onOpenCamera:(()->Void)?
+    public var onOpenPhoto:(()->Void)?
 
-    func parseError(_ error: Error?) {
+    public func parseError(_ error: Error?) {
         if let error = error {
             onError?(error.localizedDescription)
         }
     }
 
-    func finalError(_ error: Error?) {
+    public func finalError(_ error: Error?) {
         parseError(error)
         onEndIndicator?()
     }

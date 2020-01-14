@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BaseViewCell: UITableViewCell {
+open class BaseViewCell: UITableViewCell {
 
     @IBOutlet weak var view: UIView!
 
@@ -17,17 +17,17 @@ class BaseViewCell: UITableViewCell {
         nibSetup()
     }
 
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         nibSetup()
     }
 
-    override func awakeFromNib() {
+    override open func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
+    override open func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state

@@ -7,18 +7,18 @@ import UIKit
 import MBProgressHUD
 import GSMessages
  
-class Y4gViewController: UIViewController {
+open class Y4gViewController: UIViewController {
     
-    override func viewDidLoad() {
+    override open func viewDidLoad() {
         super.viewDidLoad() 
 
     }
 
-    override func didReceiveMemoryWarning() {
+    override open func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
 
-    func showError(title: String, message: String) {
+   public func showError(title: String, message: String) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
 
         let confirmButton = UIAlertAction(title: "OK", style: .default) { _ in
@@ -30,7 +30,7 @@ class Y4gViewController: UIViewController {
         }
     }
 
-    func showConfirmButton( properties: DialogConfirmHandler, handler:((Bool)->())?) {
+   public func showConfirmButton( properties: DialogConfirmHandler, handler:((Bool)->())?) {
         let alertController = UIAlertController(title: properties.title, message: properties.message, preferredStyle: .alert)
 
         let confirmButton = UIAlertAction(title: properties.strYes, style: .default) { _ in
@@ -49,21 +49,21 @@ class Y4gViewController: UIViewController {
     }
  
 
-    func startIndicator() {
+   public func startIndicator() {
 
         DispatchQueue.main.async {
             MBProgressHUD.showAdded(to: self.view, animated: false)
         }
     }
 
-    func stopIndicator() {
+   public func stopIndicator() {
 
         DispatchQueue.main.async {
             MBProgressHUD.hide(for: self.view, animated: false)
         }
     }
 
-    func showErrorMessage(message: String) {
+   public func showErrorMessage(message: String) {
         DispatchQueue.main.async {[weak self] in
             let autoHide = GSMessageOption.autoHide(true)
             let height = GSMessageOption.height(50)

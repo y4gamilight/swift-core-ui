@@ -5,30 +5,30 @@
 
 import UIKit
 
-class BaseNavigationController: UINavigationController {
+open class BaseNavigationController: UINavigationController {
 
     var onLogout:(()->Void)?
-    override func viewDidLoad() {
+    override open func viewDidLoad() {
         super.viewDidLoad()
     }
 
-    override func didReceiveMemoryWarning() {
+    override open func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
 
-    func setNavigationBarHidden(_ isHidden: Bool) {
+    public func setNavigationBarHidden(_ isHidden: Bool) {
         DispatchQueue.main.async {[weak self] in
             self?.isNavigationBarHidden = true
         }
     }
 
-    func customPush(_ controller: UIViewController, animated: Bool) {
+   public func customPush(_ controller: UIViewController, animated: Bool) {
         DispatchQueue.main.async {[weak self] in
             self?.pushViewController(controller, animated: animated)
         }
     }
     
-    func customPresent(_ controller: UIViewController, animated: Bool, completion:(()-> Void)? = nil) {
+   public func customPresent(_ controller: UIViewController, animated: Bool, completion:(()-> Void)? = nil) {
         DispatchQueue.main.async {[weak self] in
             controller.modalPresentationStyle = .overFullScreen
             self?.present(controller, animated: animated, completion: completion) 

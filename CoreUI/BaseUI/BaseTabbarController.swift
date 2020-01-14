@@ -5,13 +5,13 @@
 
 import UIKit
 
-class Y4gTabbarController: UITabBarController {
+open class Y4gTabbarController: UITabBarController {
  
-    override func viewDidLoad() {
+    override open func viewDidLoad() {
         super.viewDidLoad()
     }
 
-    override func didReceiveMemoryWarning() {
+    override open func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
 

@@ -8,10 +8,10 @@
 
 import UIKit
 
-class BaseView: UIView {
+open class BaseView: UIView {
 
     @IBOutlet weak var view: UIView!
-    var parentClass:String? = nil
+    public var parentClass:String? = nil
     override init(frame: CGRect) {
         super.init(frame: frame)
         nibSetup()
@@ -24,7 +24,7 @@ class BaseView: UIView {
     }
 
 
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         nibSetup()
     }
@@ -39,7 +39,7 @@ class BaseView: UIView {
         addSubview(view)
     }
 
-   func loadViewFromNib() -> UIView {
+   public func loadViewFromNib() -> UIView {
         if let parentClass = self.parentClass {
             let nib = UINib(nibName: parentClass, bundle: nil)
             let nibView = nib.instantiate(withOwner: self, options: nil).first as? UIView ?? UIView()
