@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "MBProgressHUD.h" 
 
 //! Project version number for CoreUI.
 FOUNDATION_EXPORT double CoreUIVersionNumber;

@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		842DAD8C23CD7BBF004E2B06 /* MBProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8453269923B6015500E559BE /* MBProgressHUD.framework */; };
-		842DAD8D23CD7BBF004E2B06 /* MBProgressHUD.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8453269923B6015500E559BE /* MBProgressHUD.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8453266623B5F78A00E559BE /* CoreUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8453265C23B5F78900E559BE /* CoreUI.framework */; };
 		8453266B23B5F78A00E559BE /* CoreUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8453266A23B5F78A00E559BE /* CoreUITests.swift */; };
 		8453266D23B5F78A00E559BE /* CoreUI.h in Headers */ = {isa = PBXBuildFile; fileRef = 8453265F23B5F78900E559BE /* CoreUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -19,8 +17,9 @@
 		8453268223B5F7E200E559BE /* BaseViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8453267B23B5F7E200E559BE /* BaseViewCell.swift */; };
 		8453268323B5F7E200E559BE /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8453267C23B5F7E200E559BE /* BaseViewController.swift */; };
 		8453268423B5F7E200E559BE /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8453267D23B5F7E200E559BE /* BaseViewModel.swift */; };
-		8453269623B5FFAF00E559BE /* GSMessages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8453269423B5FE8900E559BE /* GSMessages.framework */; };
-		8453269723B5FFAF00E559BE /* GSMessages.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8453269423B5FE8900E559BE /* GSMessages.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		84589B3424584B30003ED483 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 84589B3324584B30003ED483 /* MBProgressHUD.m */; };
+		84589B3624584F01003ED483 /* MBProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 84589B3224584B14003ED483 /* MBProgressHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		84589B3824584F3C003ED483 /* GSMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84589B3724584F3C003ED483 /* GSMessages.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,14 +33,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		8453269823B5FFAF00E559BE /* Embed Frameworks */ = {
+		84589B2D24584A6D003ED483 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				842DAD8D23CD7BBF004E2B06 /* MBProgressHUD.framework in Embed Frameworks */,
-				8453269723B5FFAF00E559BE /* GSMessages.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -62,8 +59,9 @@
 		8453267B23B5F7E200E559BE /* BaseViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewCell.swift; sourceTree = "<group>"; };
 		8453267C23B5F7E200E559BE /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		8453267D23B5F7E200E559BE /* BaseViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
-		8453269423B5FE8900E559BE /* GSMessages.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GSMessages.framework; sourceTree = "<group>"; };
-		8453269923B6015500E559BE /* MBProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MBProgressHUD.framework; sourceTree = "<group>"; };
+		84589B3224584B14003ED483 /* MBProgressHUD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		84589B3324584B30003ED483 /* MBProgressHUD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		84589B3724584F3C003ED483 /* GSMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GSMessages.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,8 +69,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				842DAD8C23CD7BBF004E2B06 /* MBProgressHUD.framework in Frameworks */,
-				8453269623B5FFAF00E559BE /* GSMessages.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,6 +139,8 @@
 		8453268523B5F8D600E559BE /* ExternalLibraries */ = {
 			isa = PBXGroup;
 			children = (
+				84589B3124584ABA003ED483 /* GSMessages */,
+				84589B3024584AB0003ED483 /* MBProgressHUD */,
 			);
 			path = ExternalLibraries;
 			sourceTree = "<group>";
@@ -150,10 +148,25 @@
 		8453269323B5FE8900E559BE /* ExternalFrameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8453269923B6015500E559BE /* MBProgressHUD.framework */,
-				8453269423B5FE8900E559BE /* GSMessages.framework */,
 			);
 			path = ExternalFrameworks;
+			sourceTree = "<group>";
+		};
+		84589B3024584AB0003ED483 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				84589B3224584B14003ED483 /* MBProgressHUD.h */,
+				84589B3324584B30003ED483 /* MBProgressHUD.m */,
+			);
+			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
+		84589B3124584ABA003ED483 /* GSMessages */ = {
+			isa = PBXGroup;
+			children = (
+				84589B3724584F3C003ED483 /* GSMessages.swift */,
+			);
+			path = GSMessages;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,6 +177,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8453266D23B5F78A00E559BE /* CoreUI.h in Headers */,
+				84589B3624584F01003ED483 /* MBProgressHUD.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,7 +192,7 @@
 				8453265823B5F78900E559BE /* Sources */,
 				8453265923B5F78900E559BE /* Frameworks */,
 				8453265A23B5F78900E559BE /* Resources */,
-				8453269823B5FFAF00E559BE /* Embed Frameworks */,
+				84589B2D24584A6D003ED483 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -219,7 +233,7 @@
 				TargetAttributes = {
 					8453265B23B5F78900E559BE = {
 						CreatedOnToolsVersion = 11.1;
-						LastSwiftMigration = 1110;
+						LastSwiftMigration = 1130;
 					};
 					8453266423B5F78A00E559BE = {
 						CreatedOnToolsVersion = 11.1;
@@ -274,6 +288,8 @@
 				8453267E23B5F7E200E559BE /* BaseNavigationController.swift in Sources */,
 				8453268123B5F7E200E559BE /* BaseView.swift in Sources */,
 				8453268323B5F7E200E559BE /* BaseViewController.swift in Sources */,
+				84589B3424584B30003ED483 /* MBProgressHUD.m in Sources */,
+				84589B3824584F3C003ED483 /* GSMessages.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,6 +435,7 @@
 		8453267123B5F78A00E559BE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -433,6 +450,7 @@
 				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = CoreUI/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -451,6 +469,7 @@
 		8453267223B5F78A00E559BE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -465,6 +484,7 @@
 				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = CoreUI/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
